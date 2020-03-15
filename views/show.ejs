@@ -1,0 +1,10 @@
+<h1> Student name:<%=student.name%></h1>
+<h2> Student ID:<%=student.id%>  </h2>
+<h3> Classes : <% for (var i = 0; i < student.courses.length; i++){ %> 
+               <h4> <%= student.courses[i].courseName %> - <%=student.courses[i].courseNumber %> - Instructor: <%= student.courses[i].faculty.name %> -  Grade Earned: <%= student.courses[i].courseGrade  %>  </h4>  
+<% } %> 
+</h3>
+<% if (sumScore/student.courses.length > 1) %> 
+<h2>
+    Term GPA: <%= sumScore / student.courses.length %> 
+</h2>
