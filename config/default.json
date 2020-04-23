@@ -1,0 +1,5 @@
+{
+    "dbURL":"mongodb+srv://lolGoodTry@cluster0-madns.mongodb.net/test?retryWrites=true&w=majority"
+    ,
+    "jwtSecret": "my_Jwt_DDT"
+}
