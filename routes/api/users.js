@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
-
+const auth = require("../../middleware/auth")
 const config = require("config");
 const jwt = require('jsonwebtoken');
 const User = require("../../models/User.js")
 
-router.post("/", (req, res) =>{
+router.post("/",auth, (req, res) =>{
     const {name, email, password} = req.body; 
     if (!name || !password || !email){
         return res.status(400).json({msg: "Enter all field"})

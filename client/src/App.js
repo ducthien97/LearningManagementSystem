@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import './App.css';
+import AppNavBar from './component/AppNavBar';
+import ShoppingList from "./component/StudentsList";
+import {Switch, Route, BrowserRouter} from 'react-router-dom'
+import {Provider} from "react-redux"
+import store from "./store"
+import {Container} from "reactstrap"
+import {loadUser} from './actions/authActions'
+import StudentsList from './component/StudentsList';
+import StudentInfo from './component/StudentInfo'
 
-function App() {
+
+class App extends React.Component {
+  componentDidMount(){
+    store.dispatch(loadUser());
+  }
+  
+  render(){
   return (
+    <Provider store = {store}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <AppNavBar></AppNavBar>
+          
+      <BrowserRouter>
+          <Switch>
+            <Route exact path = "/" component = {StudentsList}/> 
+              
+            
+            <Route path = "/:id" component = {StudentInfo}/>
+
+           
+          </Switch>
+          
+      
+      
+      </BrowserRouter>
+      
     </div>
-  );
+    </Provider>
+  );}
 }
 
 export default App;

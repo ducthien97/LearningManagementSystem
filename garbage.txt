@@ -1,0 +1,8 @@
+Student Courses: {students.courses.map(({_id,instructor, courseName, courseAverage})=>
+                                <ul key= {_id}>
+                                    <li>Instructor: {instructor}</li>
+                                    <li>Course Name: {courseName}</li>
+                                    <li>Course Average Score: {courseAverage}</li>
+                                </ul>
+                            
+                            )}

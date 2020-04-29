@@ -17,6 +17,7 @@ const CourseSchema = new Schema({
     courseAverage :{
         type: Number,
         
+        
     }
 })
 const StudentSchema = new Schema({
