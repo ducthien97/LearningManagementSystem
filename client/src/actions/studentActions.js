@@ -23,11 +23,6 @@ export const getOneStudent = (id) => (dispatch, getState) => {
         .catch(err => dispatch(returnError(err.response.data, err.response.status)))
 }
 
-
-
-
-
-
 export const deleteStudent = id => (dispatch, getState) => {
     axios.delete(`api/students/${id}`, tokenConfig(getState))
     .then(res => dispatch ({
@@ -36,6 +31,7 @@ export const deleteStudent = id => (dispatch, getState) => {
     }))
     .catch(err => dispatch(returnError(err.response.data, err.response.status)))
 };
+
 export const addStudent = student =>  (dispatch, getState) => {
     axios
         .post("api/students", student, tokenConfig(getState))
@@ -46,6 +42,7 @@ export const addStudent = student =>  (dispatch, getState) => {
         .catch(err => dispatch(returnError(err.response.data, err.response.status)))
 
 }
+
 export const SetStudentsLoading = () => {
     return {
         type: STUDENTS_LOADING

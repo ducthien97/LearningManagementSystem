@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-//const CourseSchema = require("./Course.js");
+    
 const CourseSchema = new Schema({
     courseName: {
         type: String,

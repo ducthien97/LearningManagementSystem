@@ -64,34 +64,7 @@ router.post("/:id", (req,res) => {
 
     })
 })
-// //Edit Course Route
-// router.put("/:id/:course_id", (req,res) => {
-//     var newCourse = {
-//         courseName : req.body.courseName,
-//         scores: req.body.scores,
-//         instructor: req.body.instructor
-//     }
-//     Student.findOne(req.params.id,(err, student) => {
-//         if (err){
-//             res.status(500).json({msg: "Fail to find student"})
-//         }
-//         else{
-//             Student.findByIdAndUpdate(req.params.course_id, {set: $newCourse}, function(err, course){
-//                 if (err){
-//                     res.status(500).json({status: "failed to update"})
-//                 }
-//                 else{
-//                     res.json(course);
-//                     res.json({status: "course updated"})
-//                 }
-//             })
-//         }
 
-//     })
-
-
-    
-// })
 
 
 

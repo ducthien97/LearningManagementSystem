@@ -41,6 +41,11 @@ class AppNavBar extends React.Component{
                 <NavItem>
                     <Logout></Logout>
                 </NavItem>
+                <NavItem>
+                    <NavLink href = "/newStudentForm">
+                        Create Student
+                    </NavLink>
+                </NavItem>
                 
             </Fragment>
 
@@ -70,9 +75,6 @@ class AppNavBar extends React.Component{
                                     GitHub
                                 </NavLink>
                             </NavItem>
-                            
-                            
-                            
                         </Nav>
                     </Collapse>
                 </Container>

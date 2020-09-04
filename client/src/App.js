@@ -8,8 +8,9 @@ import {Provider} from "react-redux"
 import store from "./store"
 import {Container} from "reactstrap"
 import {loadUser} from './actions/authActions'
-import StudentsList from './component/StudentsList';
+import StudentsList from './component/StudentsList'
 import StudentInfo from './component/StudentInfo'
+import NewStudentForm from './component/NewStudentForm'
 
 
 class App extends React.Component {
@@ -26,7 +27,7 @@ class App extends React.Component {
       <BrowserRouter>
           <Switch>
             <Route exact path = "/" component = {StudentsList}/> 
-              
+            <Route path = "/newStudentForm" component = {NewStudentForm}/>   
             
             <Route path = "/:id" component = {StudentInfo}/>
 
